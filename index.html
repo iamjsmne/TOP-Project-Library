@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Library</title>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <p>Books I want to read. Books I am reading. Books I have completed. I breathe books.</p>
+    </header>
+    <div class="wrapper">
+        <form autocomplete="off" action="">
+            <input type="text" id="search-bar" placeholder="Filter books by title or author...">
+        </form>
+        <form id="sort-form" action="">
+            <label for="sort">Sort by:</label>
+            <select name="sort" id="sort">
+                <option value="newest" selected>newest</option>
+                <option value="oldest">oldest</option>
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+            </select>
+        </form>
+        <form id="read-filter" action="read-filter">
+            <div>view:</div>
+            <div>
+                <input type="radio" id="all" name="view" value="all"checked>
+                <label for="all">all</label>
+            </div>
+            <div>
+                <input type="radio" id="to-read" name="view" value="to-read">
+                <label for="to-read">to read</label>
+            </div>   
+             <div>
+                <input type="radio" id="read" name="view" value="read">
+                <label for="read">read</label>
+            </div> 
+        </form>
+    </div>
+    <main id="bookshelf">
+        <button class="new-book" id="new-book">+</button>
+        <dialog id="modal">
+            <div class="modal-heading">
+                <h3>Add New Book</h3>
+                <button class="close-modal" id="close-modal">X</button>
+            </div>
+            <form action="" id="add-book-info">
+                <div class="title">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="author">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="number-of-pages">
+                    <label for="number-of-pages">Number of Pages:</label>
+                    <input type="number" id="number-of-pages" name="number-of-pages" required>
+                </div>
+                <div>
+                    <label for="status">Status:</label>
+                    <select name="status" id="status">
+                        <option value="To Read">To Read</option>
+                        <option value="Read">Read</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </dialog>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
