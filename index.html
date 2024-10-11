@@ -26,19 +26,15 @@
             </select>
         </form>
         <form id="read-filter" action="read-filter">
-            <div>view:</div>
-            <div>
-                <input type="radio" id="all" name="view" value="all"checked>
-                <label for="all">all</label>
-            </div>
-            <div>
-                <input type="radio" id="to-read" name="view" value="to-read">
-                <label for="to-read">to read</label>
-            </div>   
-             <div>
-                <input type="radio" id="read" name="view" value="read">
-                <label for="read">read</label>
-            </div> 
+            <label for="view">view</label>
+            <input type="radio" id="all" name="view" value="all"checked>
+            <label for="all">all</label>
+
+            <input type="radio" id="to-read" name="view" value="to-read">
+            <label for="to-read">to read</label>
+
+            <input type="radio" id="read" name="view" value="read">
+            <label for="read">read</label>
         </form>
     </div>
     <main id="bookshelf">
@@ -61,7 +57,7 @@
                     <label for="number-of-pages">Number of Pages:</label>
                     <input type="number" id="number-of-pages" name="number-of-pages" required>
                 </div>
-                <div>
+                <div class="status">
                     <label for="status">Status:</label>
                     <select name="status" id="status">
                         <option value="To Read">To Read</option>
@@ -71,9 +67,7 @@
                 <button type="submit" id="submit">Submit</button>
             </form>
         </dialog>
-
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
