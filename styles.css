@@ -95,6 +95,10 @@ form>div>input, form>div>select {
   padding: 2px;
   font-size: 1rem;
 }
+
+input::placeholder {
+  font-style: italic;
+}
 /*add book button*/
 .add-book {
   margin-top: 20px; /*adjust later*/
@@ -140,9 +144,14 @@ grid-template-rows: repeat(5, 1fr);
   display: flex;
   justify-content: space-between;
 }
-.statusToggle {
+.statusToggle { 
   background-color: lightgoldenrodyellow;
-  border: none;
+  border: 1px solid black;
   font-size: 1.2rem;
   color: red;
+}
+
+.statusToggle:hover {
+  background-color: #ffe54c;
+  transition-duration: 0.2s;
 }
